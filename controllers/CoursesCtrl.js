@@ -18,7 +18,13 @@ const addGrade = async (req, res) => {
   res.send(newGrade)
 }
 
+const getCourses = async (req, res) => {
+  const courses = await Course.find({})
+  res.send(courses)
+}
+
 module.exports = {
   createCourse,
-  addGrade
+  addGrade,
+  getCourses
 }
