@@ -3,10 +3,10 @@ const { Student, Result } = require('../models')
 const getAllStudents = async (req, res) => {
   const Students = await Student.find({}).populate({
     path: 'results',
-    populate: {
+    populate: [{
       path: 'grade',
       model: 'Grade'
-    }
+    }, { path: 'course', model: 'Course' }]
   }).lean();
   
   const avgStudents = Students.map((student) => {
