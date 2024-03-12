@@ -6,5 +6,7 @@ router.get('/', controller.getAllStudents)
 
 router.post('/create', controller.createStudent)
 
+router.post('/enroll', controller.enrollStudent)
+
 
 module.exports = router
