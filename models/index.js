@@ -8,7 +8,7 @@ const courseSchema = require('./Course')
 const Student = mongoose.model('Student', studentSchema)
 const Grade = mongoose.model('Grade', gradeSchema)
 const Result = mongoose.model('Result', resultSchema)
-const Course = mongoose.model('Event', courseSchema)
+const Course = mongoose.model('Course', courseSchema)
 
 module.exports = {
   Student,
